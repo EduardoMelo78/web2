@@ -1,0 +1,50 @@
+/*Regras
+<seletor>{
+    propriedade: valor;
+}
+*/
+
+body{
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Montserrat", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: <weight>;
+     font-style: normal;
+}
+
+.box{
+    border-radius: 10px;
+    background-color: lightpink;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;/*Vertical*/
+    align-items: center;    /*Horizontal*/
+    height: 50%;
+    width: 30%;
+    gap: 20px;
+}
+
+.bloco{
+    
+    width: 90%;
+    gap: 10px;
+    display: flex;
+
+}
+
+.legenda{
+    font-weight: 600;
+    width: 30%;
+    text-align: right;
+}
+
+.valor{
+    width: 70%;
+}
+
