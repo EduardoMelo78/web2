@@ -1,23 +1,26 @@
 var turma = []
 
-fetch('URL')
-.then()
-.then()
-.catch( erro => )
+fetch('https://viacep.com.br/ws/48603004/json/')
+.then( response => response.json())
+.then( data => patati(data))
+.catch( erro => console.error("Deu ruim aqui...", erro))
 
-    console.log(turma)
 
-    const tabela = document.querySelector("#tabela-turma")
+    function patati(cep){
 
-turma.map(item => {
+        const tabela = document.querySelector('#tabela-turma')
+        
+//turma.map(item => {
+
+        
     tabela.innerHTML += `
         <tr>
-        <td>${item.disciplina}</td>
-        <td>${item.professor}</td>
-        <td>${item.alunos}</td>
-    </tr>
-    `
-})
+        <td>${cep['logradouro']}</td>
+        <td>${cep.bairro}</td>
+        <td>${cep.localidade}</td>
+        </tr>`
+//})
+    }
 
 
 
