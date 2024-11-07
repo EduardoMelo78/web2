@@ -1,43 +1,37 @@
+
 turma = [
     {
-    curso :"Técnico em eletro",
-    disciplina :"projeto",
-    professor: "Jurema Gomes",
-    turno : "vespertino",
-    alunos : 50
+        curso: "Técnico em Biocombustíveis",
+        disciplina: "Projeto Integrador",
+        professor: "Eliomau Gomes",
+        turno: "Vespertino",
+        alunos: 20
     },
-
     {
-        curso :"Técnico em biocombustiveis",
-        disciplina :"Alimentação",
-        professor: "Gecilma Gomes",
-        turno : "matutino",
-        alunos : 70
-        },
-  {
-            curso :"Técnico em nutrição",
-            disciplina :"Alimentação de bovinos",
-            professor: "Maine Melo",
-            turno : "diurno",
-            alunos : 10
-            },
-    ]
+        curso: "Técnico em Informática",
+        disciplina: "Desenvolvimento Web II",
+        professor: "Fabiano Vaz",
+        turno: "Noturno",
+        alunos: 14
+    },
+    {
+        curso: "Técnico em Informática",
+        disciplina: "Linguagem II",
+        professor: "Fabiano Vaz",
+        turno: "Noturno",
+        alunos: 1
+    },
+]
 
-    console.log(turma)
+console.log(turma)
+const tabela = document.querySelector("#tabela-turma")
 
-    const tabela = document.querySelector("#tabela-turma")
-
-turma.map(item => {
+turma.map( item => {
     tabela.innerHTML += `
-    <tr>
-    <td>${item.disciplina}</td>
-    <td>${item.professor}</td>
-    <td>${item.alunos}</td>
-</tr>
-`
+            <tr>
+                <td>${item.disciplina}</td>
+                <td>${item.professor}</td>
+                <td>${item.alunos}</td>
+            </tr>
+            `
 })
-
-
-
-
-  
