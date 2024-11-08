@@ -41,3 +41,31 @@ body{
 .valor{
     width: 70%;
 }
+
+table{
+    width: 40%;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+thead{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+tbody{
+    border: none;
+    
+}
+
+td{
+    text-align: center;
+}
+
+input{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    padding-left: 10px;
+}
