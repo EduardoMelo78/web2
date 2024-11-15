@@ -16,7 +16,7 @@ function exibirDados(paises){
             <div class = "pais-box">
                 <div class= "sobre">
                 <div class= "pais-nome">${pais.name.common}</div>
-                <div class="pais-capital">${pais.capital}</div>
+                <div class="pais-capital">${pais.capital[0]}</div>
                 </div>
                 <img src="${pais.flags.svg}" alt="Bandeira de ${pais.name.common}" class="pais-bandeira">
             </div>
