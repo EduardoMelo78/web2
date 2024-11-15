@@ -28,7 +28,7 @@ function cadastrar(event){
     .catch( erro => console.error("Deu ruim aqui..", erro))
 }
 
-mostrar()
+
 
 function mostrar(){
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -37,10 +37,10 @@ function mostrar(){
         const resposta = document.querySelector("#resposta")
         div.innerHTML = ''
         
-        postagem.map( item => {
+        postagem.map( post => {
             resposta.innerHTML += `
-            <div>Post Criado com Sucesso! Id: ${item.id} </div>
-            <div>Postagem: ${item.title}</div>
+            <div>Post Criado com Sucesso! Id: ${post.id} </div>
+            <div>Postagem: ${post.title}</div>
             
             `
         })
