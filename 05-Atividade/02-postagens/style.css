@@ -14,7 +14,7 @@ body{
 
 main{
     width: 20vw;
-    height: 40vh;
+    height: 50vh;
 
     display: flex;
     justify-content: center;
@@ -28,6 +28,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
     background-color: #ccc;
     box-shadow: 2px 6px 24px 0px rgba(0,0,0,0.6);
     
@@ -69,7 +70,18 @@ button{
     border-radius: 10px;
 }
 
+button:hover{
+    background-color: rgb(45, 112, 176);
+    color: white;
+}
+
+button:active{
+    background-color: rgb(35, 89, 144);
+    color: white;
+}
+
 #resposta{
     margin-top: 20px;
-    width: 80%;
+    width: 18%;
+    text-align: center;
 }
