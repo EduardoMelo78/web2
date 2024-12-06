@@ -1,10 +1,17 @@
 package com.exemple.demo.controle;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.modelo.Pessoa;
+import com.example.demo.repository.RepositorioPessoa;
 
 
 
@@ -12,23 +19,30 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class ControlePessoa {
 	
-	@PostMapping
-	public String save() {
+	@Autowired
+	RepositorioPessoa repositorio;
 	
-		return "POST Add";
+	/** method:	POST 
+	* localhost:8080/pessoa
+	* body : json->pessoa
+	*/
+	@PostMapping
+	public Pessoa save(@RequestBody Pessoa pessoa) {
+	
+		repositorio.save(pessoa);
 	}
 	
 	
 	@GetMapping
-	public String findAll() {
-		return "GET list";
+	public List<Pessoa> findAll() {
+		return repositorio.findAll();
 	}
 	
 	
 	@GetMapping("/{id}")
-	public String findById (@PathVariable int id) {
+	public Pessoa findById (@PathVariable("id") int id) {
 		
-		return "GET findById: " + id;
+		return repositorio.findById(id);
 		
 	}
 
