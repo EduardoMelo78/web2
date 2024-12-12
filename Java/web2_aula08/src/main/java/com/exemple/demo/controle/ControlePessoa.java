@@ -27,7 +27,7 @@ public class ControlePessoa {
 	* body : json->pessoa
 	*/
 	@PostMapping
-	public Pessoa save(@RequestBody Pessoa pessoa) {
+	public Pessoa savePessoa(@RequestBody Pessoa pessoa) {
 	
 		repositorio.save(pessoa);
 	}
