@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+C:\Users\meloe\OneDrive\Documentos\Github\web2\Java\web2\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3155932066.index
